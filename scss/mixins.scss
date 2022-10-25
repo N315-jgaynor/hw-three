@@ -1,0 +1,34 @@
+@mixin browseBox($browseImgUrl) {
+  height: 200px;
+  min-width: 300px;
+  background-image: url($browseImgUrl);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+
+  .button-holder {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    width: 220px;
+    height: 50px;
+
+    .button {
+      margin-top: 20px;
+    }
+  }
+
+  p {
+    color: white;
+    margin: auto 20px;
+    font-family: Roboto;
+    line-height: 1.5;
+    font-size: 15px;
+  }
+}

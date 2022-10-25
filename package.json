@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "sass": "^1.55.0"
+  },
+
+  "scripts": {
+    "compile:sass": "sass scss/styles.scss css/styles.css -w"
+  }
+
+
+}

@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url(fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: RobotoItalic;
+  src: url(fonts/Roboto/Roboto-Italic.ttf);
+}
+.navHolder {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+.navHolder .nav-logo {
+  color: white;
+  font-family: Roboto;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin: 15px 0 auto 20px;
+}
+.navHolder .nav-logo .nav-logo-img {
+  background-image: url(../images/calloso-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 70px;
+  width: 150px;
+}
+.navHolder .nav-logo h1 {
+  margin: 0 auto;
+}
+.navHolder .links {
+  height: 50px;
+  margin: auto 20px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: height 0.4s, opacity 0.4s ease-in;
+}
+.navHolder .links a {
+  text-decoration: none;
+  color: #71ca58;
+  font-family: Roboto;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.bars {
+  display: none;
+  margin: auto 20px auto 0;
+}
+.bars .bar {
+  display: block;
+  width: 25px;
+  margin: 5px 0;
+  background-color: #71ca58;
+  height: 3px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.bars.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.bars.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.bars.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media screen and (max-width: 960px) {
+  .navHolder .links {
+    position: fixed;
+    width: 100vw;
+    opacity: 0;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    z-index: 10;
+  }
+  .navHolder .links.active {
+    opacity: 1;
+    top: 100px;
+    height: 400px;
+    background-color: #000;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+  .navHolder .bars {
+    display: block;
+  }
+}
+.browse {
+  background-color: #000;
+}
+.browse h1 {
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: RobotoBold;
+  font-size: 50px;
+}
+.browse .browse-container {
+  margin: auto 30px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+.browse .browse-container .browse-box {
+  height: 260px;
+  width: 400px;
+  display: flex;
+  margin: 30px auto 80px auto;
+}
+.browse .browse-container .browse-box .button {
+  background-color: #71ca58;
+  height: 40px;
+  width: 100px;
+  display: none;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  margin-top: auto;
+  cursor: pointer;
+}
+.browse .browse-container .browse-box p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box .browse-img-one {
+  height: 200px;
+  min-width: 300px;
+  background-image: url("../images/hw-two-thumbs-assets/thumb1_200x200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+}
+.browse .browse-container .browse-box .browse-img-one .button-holder {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  width: 220px;
+  height: 50px;
+}
+.browse .browse-container .browse-box .browse-img-one .button-holder .button {
+  margin-top: 20px;
+}
+.browse .browse-container .browse-box .browse-img-one p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box .browse-img-two {
+  height: 200px;
+  min-width: 300px;
+  background-image: url("../images/hw-two-thumbs-assets/thumb2_200x200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+}
+.browse .browse-container .browse-box .browse-img-two .button-holder {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  width: 220px;
+  height: 50px;
+}
+.browse .browse-container .browse-box .browse-img-two .button-holder .button {
+  margin-top: 20px;
+}
+.browse .browse-container .browse-box .browse-img-two p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box .browse-img-three {
+  height: 200px;
+  min-width: 300px;
+  background-image: url("../images/hw-two-thumbs-assets/thumb3_200x200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+}
+.browse .browse-container .browse-box .browse-img-three .button-holder {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  width: 220px;
+  height: 50px;
+}
+.browse .browse-container .browse-box .browse-img-three .button-holder .button {
+  margin-top: 20px;
+}
+.browse .browse-container .browse-box .browse-img-three p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box .browse-img-four {
+  height: 200px;
+  min-width: 300px;
+  background-image: url("../images/hw-two-thumbs-assets/thumb4_200x200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+}
+.browse .browse-container .browse-box .browse-img-four .button-holder {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  width: 220px;
+  height: 50px;
+}
+.browse .browse-container .browse-box .browse-img-four .button-holder .button {
+  margin-top: 20px;
+}
+.browse .browse-container .browse-box .browse-img-four p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box .browse-img-five {
+  height: 200px;
+  min-width: 300px;
+  background-image: url("../images/hw-two-thumbs-assets/thumb5_200x200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+}
+.browse .browse-container .browse-box .browse-img-five .button-holder {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  width: 220px;
+  height: 50px;
+}
+.browse .browse-container .browse-box .browse-img-five .button-holder .button {
+  margin-top: 20px;
+}
+.browse .browse-container .browse-box .browse-img-five p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box .browse-img-six {
+  height: 200px;
+  min-width: 300px;
+  background-image: url("../images/hw-two-thumbs-assets/thumb6_200x200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+}
+.browse .browse-container .browse-box .browse-img-six .button-holder {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  width: 220px;
+  height: 50px;
+}
+.browse .browse-container .browse-box .browse-img-six .button-holder .button {
+  margin-top: 20px;
+}
+.browse .browse-container .browse-box .browse-img-six p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box .browse-img-seven {
+  height: 200px;
+  min-width: 300px;
+  background-image: url("../images/hw-two-thumbs-assets/thumb7_200x200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+}
+.browse .browse-container .browse-box .browse-img-seven .button-holder {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  width: 220px;
+  height: 50px;
+}
+.browse .browse-container .browse-box .browse-img-seven .button-holder .button {
+  margin-top: 20px;
+}
+.browse .browse-container .browse-box .browse-img-seven p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box .browse-img-eight {
+  height: 200px;
+  min-width: 300px;
+  background-image: url("../images/hw-two-thumbs-assets/thumb8_200x200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+}
+.browse .browse-container .browse-box .browse-img-eight .button-holder {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  width: 220px;
+  height: 50px;
+}
+.browse .browse-container .browse-box .browse-img-eight .button-holder .button {
+  margin-top: 20px;
+}
+.browse .browse-container .browse-box .browse-img-eight p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box .browse-img-nine {
+  height: 200px;
+  min-width: 300px;
+  background-image: url("../images/hw-two-thumbs-assets/thumb9_200x200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+}
+.browse .browse-container .browse-box .browse-img-nine .button-holder {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  width: 220px;
+  height: 50px;
+}
+.browse .browse-container .browse-box .browse-img-nine .button-holder .button {
+  margin-top: 20px;
+}
+.browse .browse-container .browse-box .browse-img-nine p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box .browse-img-ten {
+  height: 200px;
+  min-width: 300px;
+  background-image: url("../images/hw-two-thumbs-assets/thumb10_200x200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-color: red;
+}
+.browse .browse-container .browse-box .browse-img-ten .button-holder {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  width: 220px;
+  height: 50px;
+}
+.browse .browse-container .browse-box .browse-img-ten .button-holder .button {
+  margin-top: 20px;
+}
+.browse .browse-container .browse-box .browse-img-ten p {
+  color: white;
+  margin: auto 20px;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.browse .browse-container .browse-box:hover .button {
+  display: flex;
+}
+
+@media screen and (max-width: 960px) {
+  .browse .browse-container .browse-box .button {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
