@@ -2,7 +2,7 @@
 
 ## Web4 Link
 
-http://in-info-web4.informatics.iupui.edu/~jgaynor/public.html/hw-three.html
+in-info-web4.informatics.iupui.edu/~jgaynor/hw-three/index.html
 
 ### Objectives
 
